@@ -1,5 +1,5 @@
 
-vi_msfa <- function(X_s,
+cavi_msfa <- function(X_s,
                     K,
                     J_s,
                     verbose = 1,
@@ -11,7 +11,7 @@ vi_msfa <- function(X_s,
   S <- length(X_s)
   
   p_dims <- sapply(X_s, function(x) dim(x)[2])
-  if(length(unique(p_dims) > 1)) {
+  if(length(unique(p_dims)) > 1) {
     warning("Each study must have the same number of variables!")
   } else{
     P <- unique(p_dims)

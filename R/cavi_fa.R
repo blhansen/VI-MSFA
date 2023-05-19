@@ -328,7 +328,7 @@ cavi_fa <- function(X,
   # Estimate for Psi
   Psi_estimated <- mean_Psi^(-1)
   
-  estimates <- list("phi"=Phi_estimated, "psi"=Psi_estimated, "n_iter"=n_iter, "var_phi"=var_Phi)
+  estimates <- list("mean_lambda"=Phi_estimated, "mean_psi"=Psi_estimated, "n_iter"=n_iter, "var_lambda"=var_Phi)
   
   return(estimates)
 }

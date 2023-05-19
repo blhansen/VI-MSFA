@@ -7,8 +7,8 @@
 svi_fa <- function(X,
                    K,
                    batch_prop = 0.2,
-                   fr = 0.51,
-                   delay = 10,
+                   fr = 0.75,
+                   delay = 1,
                    verbose = 1,
                    tol = 1e-2,
                    min_iter = 5,
@@ -394,7 +394,8 @@ svi_fa <- function(X,
   # Estimate for Psi
   Psi_estimated <- mean_Psi^(-1)
   
-  estimates <- list("phi"=Phi_estimated, "psi"=Psi_estimated, "n_iter"=n_iter)
+  estimates <- list("mean_lambda"=Phi_estimated, "mean_psi"=Psi_estimated, "n_iter"=n_iter, "var_lambda"=var_Phi)
+  
   
   return(estimates)
 }
