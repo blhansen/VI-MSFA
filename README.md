@@ -12,6 +12,8 @@ using simulated data.
 ## Simulate some data
 
 ```{r sims, echo = TRUE, results = TRUE, tidy = TRUE}
+devtools::install_github("blhansen/VI-MSFA")
+library(VIMSFA)
 P = 50
 J = 4
 N = 100
@@ -27,7 +29,6 @@ X <- MASS::mvrnorm(N, mu=rep(0,P), Sigma=Sigma)
 Now we can approximate the posterior distribution of Bayesian FA via CAVI and SVI
 
 ```{r get estimate, results = FALSE}
-source("R/cavi_fa.R")
 cavi_est <- cavi_fa(X, J, scale=FALSE)
 ```
 
@@ -42,8 +43,6 @@ MatrixCorrelation::RV(cavi_sigma, Sigma)
 
 We can do the same analysis using SVI instead:
 ```{r svi, results=FALSE}
-source("R/svi_fa.R")
-
 svi_est <- svi_fa(X, J, scale=FALSE)
 svi_lambda <- svi_est$mean_lambda
 svi_psi <- svi_est$mean_psi

@@ -1,0 +1,13 @@
+Package: VIMSFA
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Blake
+Maintainer: Blake Hansen <blake_hansen@brown.edu>
+Description: Fits the Factor Analysis and Multi-Study Factor Analysis models with the gamma process prior via variational Bayes.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Depends: R (>= 4.3.0)
+Imports: mnormt, sparsepca
