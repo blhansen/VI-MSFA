@@ -2,7 +2,7 @@
 
 author: Blake Hansen
 
-Approximate Bayesian Factor Analysis via [CAVI] and [SVI](#1-approximating-bayesian-FA).
+Approximate Bayesian Factor Analysis via CAVI and SVI.
 
 ## 1 Bayesian Factor Analysis via CAVI and SVI
 
