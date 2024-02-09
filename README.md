@@ -67,8 +67,6 @@ Sigma_s <- lapply(1:S, function(s){tcrossprod(Phi) + tcrossprod(Lambda_s[[s]]) +
 
 X_s <- lapply(1:S, function(s) MASS::mvrnorm(N_s[s], mu=rep(0,P), Sigma=Sigma_s[[s]]))
 
-source("R/cavi_msfa.R")
-
 cavi_est <- cavi_msfa(X_s, K, J_s)
 cavi_phi <- cavi_est$mean_phi
 cavi_lambda_s <- cavi_est$mean_lambda_s
@@ -77,7 +75,6 @@ cavi_sigma_s <- lapply(1:S, function(s) tcrossprod(cavi_phi) + tcrossprod(cavi_l
 
 MatrixCorrelation::RV(tcrossprod(cavi_phi), tcrossprod(Phi))
 
-source("R/svi_msfa.R")
 
 svi_est <- svi_msfa(X_s, K, J_s)
 svi_phi <- svi_est$mean_phi
