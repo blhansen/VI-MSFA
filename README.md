@@ -1,6 +1,6 @@
 # VI-MSFA
 
-author: Blake Hansen, Alejandra Avalos-Pacheco, Massimiliano Russo, Roberta De Vito
+author: Blake Hansen
 
 Approximate Bayesian Factor Analysis via [CAVI] and [SVI](#1-approximating-bayesian-FA).
 
